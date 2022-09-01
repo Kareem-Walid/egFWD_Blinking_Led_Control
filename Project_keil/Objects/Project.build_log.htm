@@ -1,0 +1,338 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Kareem Walid, ARM, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.7.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+C:\Users\Kareem\Desktop\Project_FWD_1\Project.uvprojx
+Project File Date:  07/27/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+../GPTM/GPTM.c(15): warning: In file included from...
+../GPTM/includes\GPTM.h(18): warning: In file included from...
+../GPTM/includes/GPTM_Types.h(2): warning: In file included from...
+../Common\Std_Types.h(57): warning: no newline at end of file [-Wnewline-eof]
+ *********************************************************************************************************************/
+                                                                                                                       ^
+../GPTM/GPTM.c(15): warning: In file included from...
+../GPTM/includes\GPTM.h(19): warning: In file included from...
+../Common\MCU_HardWare.h(65): warning: 'GPIODIR' macro redefined [-Wmacro-redefined]
+#define GPIODIR(x)          *((volatile uint32*)(GPIO_OFFSET(x)+ 0x0400))
+        ^
+../Common\MCU_HardWare.h(60): note: previous definition is here
+#define GPIODIR(x)      *((volatile uint32*)(GPIO_OFFSET(x)+ 0x400))
+        ^
+../Common\MCU_HardWare.h(190): warning: no newline at end of file [-Wnewline-eof]
+#endif /* MCU_HARDWARE_H_ */
+                            ^
+../GPTM/GPTM.c(15): warning: In file included from...
+../GPTM/includes\GPTM.h(51): warning: no newline at end of file [-Wnewline-eof]
+ *********************************************************************************************************************/
+                                                                                                                       ^
+../GPTM/GPTM.c(54): warning: // comments are not allowed in this language [-Wcomment]
+        SYSCTL_RCGCTIMER_REG |= 0X01;       // to activater timer0
+                                            ^
+5 warnings generated.
+compiling GPTM.c...
+../DIO/DIO.c(14): warning: In file included from...
+../DIO/includes\DIO.h(18): warning: In file included from...
+../Common\BIT_MATH.h(51): warning: no newline at end of file [-Wnewline-eof]
+ *********************************************************************************************************************/
+                                                                                                                       ^
+../DIO/DIO.c(14): warning: In file included from...
+../DIO/includes\DIO.h(19): warning: In file included from...
+../Common\MCU_HardWare.h(65): warning: 'GPIODIR' macro redefined [-Wmacro-redefined]
+#define GPIODIR(x)          *((volatile uint32*)(GPIO_OFFSET(x)+ 0x0400))
+        ^
+../Common\MCU_HardWare.h(60): note: previous definition is here
+#define GPIODIR(x)      *((volatile uint32*)(GPIO_OFFSET(x)+ 0x400))
+        ^
+../Common\MCU_HardWare.h(190): warning: no newline at end of file [-Wnewline-eof]
+#endif /* MCU_HARDWARE_H_ */
+                            ^
+../DIO/DIO.c(14): warning: In file included from...
+../DIO/includes\DIO.h(20): warning: In file included from...
+../DIO/includes/DIO_Types.h(16): warning: In file included from...
+../Common\Std_Types.h(57): warning: no newline at end of file [-Wnewline-eof]
+ *********************************************************************************************************************/
+                                                                                                                       ^
+../DIO/DIO.c(14): warning: In file included from...
+../DIO/includes\DIO.h(20): warning: In file included from...
+../DIO/includes/DIO_Types.h(107): warning: expected ';' at end of declaration list
+        DIO_PinLevel  level
+                           ^
+                           ;
+../DIO/DIO.c(14): warning: In file included from...
+../DIO/includes\DIO.h(56): warning: no newline at end of file [-Wnewline-eof]
+ *********************************************************************************************************************/
+                                                                                                                       ^
+../DIO/DIO.c(41): warning: // comments are not allowed in this language [-Wcomment]
+        SYSCTL_RCGCGPIO_REG  |= PortConfig.Port_clock;                  //init for port F 0x00001000
+                                                                        ^
+../DIO/DIO.c(62): warning: implicit conversion loses integer precision: 'unsigned long' to 'DIO_PinLevel' [-Wimplicit-int-conversion]
+        return READ_BIT(GPIODATA(ChannelID.Port),ChannelID.Pin);
+        ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Common\BIT_MATH.h(25): note: expanded from macro 'READ_BIT'
+#define     READ_BIT(Reg_Name,Bit_position)           ((Reg_Name&(1<<Bit_position))>>Bit_position)
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../DIO/DIO.c(100): warning: implicit conversion loses integer precision: 'volatile uint32' (aka 'volatile unsigned long') to 'DIO_PortValue' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return GPIODATA(PortID);
+        ~~~~~~ ^~~~~~~~~~~~~~~~
+../Common\MCU_HardWare.h(64): note: expanded from macro 'GPIODATA'
+#define GPIODATA(x)         *((volatile uint32*)(GPIO_OFFSET(x)))
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../DIO/DIO.c(139): warning: no newline at end of file [-Wnewline-eof]
+ *********************************************************************************************************************/
+                                                                                                                       ^
+10 warnings generated.
+compiling DIO.c...
+main.c(2): warning: In file included from...
+../DIO/includes\DIO.h(18): warning: In file included from...
+../Common\BIT_MATH.h(51): warning: no newline at end of file [-Wnewline-eof]
+ *********************************************************************************************************************/
+                                                                                                                       ^
+main.c(2): warning: In file included from...
+../DIO/includes\DIO.h(19): warning: In file included from...
+../Common\MCU_HardWare.h(65): warning: 'GPIODIR' macro redefined [-Wmacro-redefined]
+#define GPIODIR(x)          *((volatile uint32*)(GPIO_OFFSET(x)+ 0x0400))
+        ^
+../Common\MCU_HardWare.h(60): note: previous definition is here
+#define GPIODIR(x)      *((volatile uint32*)(GPIO_OFFSET(x)+ 0x400))
+        ^
+../Common\MCU_HardWare.h(190): warning: no newline at end of file [-Wnewline-eof]
+#endif /* MCU_HARDWARE_H_ */
+                            ^
+main.c(2): warning: In file included from...
+../DIO/includes\DIO.h(20): warning: In file included from...
+../DIO/includes/DIO_Types.h(16): warning: In file included from...
+../Common\Std_Types.h(57): warning: no newline at end of file [-Wnewline-eof]
+ *********************************************************************************************************************/
+                                                                                                                       ^
+main.c(2): warning: In file included from...
+../DIO/includes\DIO.h(20): warning: In file included from...
+../DIO/includes/DIO_Types.h(107): warning: expected ';' at end of declaration list
+        DIO_PinLevel  level
+                           ^
+                           ;
+main.c(2): warning: In file included from...
+../DIO/includes\DIO.h(56): warning: no newline at end of file [-Wnewline-eof]
+ *********************************************************************************************************************/
+                                                                                                                       ^
+main.c(18): warning: implicit declaration of function 'GPTM_Delay' [-Wimplicit-function-declaration]
+  GPTM_Delay(TIME_ON);  
+  ^
+main.c(28): warning: implicit declaration of function 'GPTM_Delay' [-Wimplicit-function-declaration]
+                 GPTM_Delay(TIME_OFF);  
+                 ^
+main.c(31): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(23): warning: no previous prototype for function 'TIMER0A_Handler' [-Wmissing-prototypes]
+TIMER0A_Handler()
+^
+main.c(23): note: declare 'static' if the function is not intended to be used outside of this translation unit
+TIMER0A_Handler()
+^
+static 
+main.c(23): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+TIMER0A_Handler()
+               ^
+main.c(31): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+12 warnings generated.
+compiling main.c...
+assembling startup_TM4C123.s...
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(338): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(357): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(713): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(729): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(774): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(779): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(872): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(885): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(892): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(897): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(904): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(910): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(917): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(924): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(929): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(936): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(942): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(949): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(956): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(961): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(968): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(974): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(981): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(988): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(993): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1000): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1006): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1013): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1020): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1025): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1032): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1038): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1045): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1052): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1057): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1064): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1070): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1077): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1084): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1089): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1096): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1102): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(19): warning: // comments are not allowed in this language [-Wcomment]
+//-------- <<< Use Configuration Wizard in Context Menu >>> ------------------
+^
+45 warnings generated.
+compiling system_TM4C123.c...
+linking...
+Program Size: Code=1232 RO-data=636 RW-data=0 ZI-data=608  
+".\Objects\Project.axf" - 0 Error(s), 72 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Kareem/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Kareem/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:1.0.1
+      Source file:   Device/Source/system_TM4C123.c
+      Include file:  Device/Include/TM4C123/TM4C123.h
+      Source file:   Device/Source/ARM/startup_TM4C123.s
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
